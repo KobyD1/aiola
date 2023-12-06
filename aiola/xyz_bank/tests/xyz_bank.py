@@ -1,4 +1,3 @@
-
 import pytest
 from aiola.xyz_bank.commons.globals import USER, DEPOSIT, WITHDRAWEL
 from aiola.xyz_bank.commons.welcome_buttons import welcomeButtons
@@ -20,5 +19,3 @@ class TestBankXyz():
         row_withdrawel_data = transactions_page.get_table_row_data(2)
         assert exp_deposit_data == row_deposit_data, "One or more Deposit data is not as define"
         assert exp_withdrawel_data == row_withdrawel_data, "One or more Withdrawel data is not as define"
-
-

@@ -4,7 +4,7 @@ from playwright.sync_api import sync_playwright
 from aiola.xyz_bank.commons.globals import URL_BANK, BROWSER
 from aiola.xyz_bank.pages.login_page import loginPage
 from aiola.xyz_bank.pages.transactions_page import transactionsPage
-from aiola.xyz_bank.pages.users_page import  usersPage
+from aiola.xyz_bank.pages.users_page import usersPage
 from aiola.xyz_bank.pages.welcome_page import welcomePage
 
 
@@ -23,8 +23,7 @@ def setup_browser():
         welcome_page = welcomePage(page)
         transactions_page = transactionsPage(page)
 
-        yield page , login_page, users_page ,welcome_page,transactions_page
+        yield page, login_page, users_page, welcome_page, transactions_page
         page.close()
         browser.close()
         print("Test end")
-
