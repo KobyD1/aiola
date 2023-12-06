@@ -63,10 +63,9 @@ class welcomePage():
     def get_date_as_string(self) -> str:
         present_day = datetime.now()
         month = calendar.month_name[present_day.month]
-        date = present_day.strftime("%d, %Y %#I:%#M:%#S %p")
+        date = present_day.strftime("%d, %Y %#I:%M:%#S %p")
         if (date[0] == "0"):
             date = date[1:]
-            print(date)
         date = month[:3] + " " + date
         return date
 
