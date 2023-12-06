@@ -55,12 +55,12 @@ class welcomePage():
         withdrawel_data["type"] = "Debit"
         return withdrawel_data
 
-    def get_balance(self):
+    def get_balance(self)-> int:
         title = self.__page.query_selector_all(self.__title_locator)
         balance = title[1].text_content()
         return int(balance)
 
-    def get_date_as_string(self) -> dict:
+    def get_date_as_string(self) -> str:
         present_day = datetime.now()
         month = calendar.month_name[present_day.month]
         date = present_day.strftime("%d, %Y %#I:%#M:%#S %p")

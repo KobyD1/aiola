@@ -31,7 +31,7 @@ class transactionsPage():
         print(f"the following row data found {row_data}")
         return row_data
 
-    def get_table_rows_amount(self):
+    def get_table_rows_amount(self)-> int:
         rows = self.__page.query_selector_all("tr")
         print(f'Rows found = {len(rows)}')
         if ({len(rows)} == 1):
