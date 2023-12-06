@@ -69,6 +69,6 @@ class welcomePage():
         date = month[:3] + " " + date
         return date
 
-    def is_success_appears(self):
+    def assert_is_success_message(self):
         assert self.__page.locator(
             self.__action_success_locator).is_visible(), "Success message did not appears as expected"

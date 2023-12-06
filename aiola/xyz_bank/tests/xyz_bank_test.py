@@ -12,10 +12,10 @@ class TestBankXyz():
         users_page.select_user(USER)
         welcome_page.click_on_welcome_button(welcomeButtons.TRANSACTIONS)
         transactions_page.reset_table_and_back()
-        exp_deposit_data = welcome_page.set_deposit(DEPOSIT)
-        exp_withdrawel_data = welcome_page.set_withdrawel(WITHDRAWEL)
+        exp_deposit = welcome_page.set_deposit(DEPOSIT)
+        exp_withdrawel = welcome_page.set_withdrawel(WITHDRAWEL)
         welcome_page.click_on_welcome_button(welcomeButtons.TRANSACTIONS)
-        row_deposit_data = transactions_page.get_table_row_data(1)
-        row_withdrawel_data = transactions_page.get_table_row_data(2)
-        assert exp_deposit_data == row_deposit_data, "One or more Deposit data is not as define"
-        assert exp_withdrawel_data == row_withdrawel_data, "One or more Withdrawel data is not as define"
+        act_deposit = transactions_page.get_table_row_data(1)
+        act_withdrawel = transactions_page.get_table_row_data(2)
+        assert exp_deposit == act_deposit, "One or more Deposit data is not as define"
+        assert exp_withdrawel == act_withdrawel, "One or more Withdrawel data is not as define"
